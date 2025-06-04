@@ -139,6 +139,150 @@
 | |
 </pre>
 
+# 🖥️ What is a Computer?
+
+A **computer** is an **electronic device** that takes **input**, processes it using a **set of instructions (called programs)**, and gives an **output**. It can also **store data** for future use.
+
+
+## 🔄 Basic Functions of a Computer
+
+1. **Input** – Getting data from the user (e.g., using a keyboard or mouse)
+2. **Processing** – Working on the data (inside the CPU)
+3. **Output** – Showing the result (on screen or printer)
+4. **Storage** – Saving the data (in hard disk, pen drive, etc.)
+
+
+## 📝 In Simple Words
+
+A computer is a **machine** that helps us do tasks like:
+
+- Typing documents
+- Drawing pictures
+- Solving calculations
+- Playing games
+- Browsing the internet
+
+
+## 💻 Examples of Computers
+
+- Desktop
+- Laptop
+- Tablet
+- Smartphone
+
+
+# 💻 Hardware and Software
+
+## 🧠 What is Hardware?
+**Hardware** refers to the **physical components** of a computer system that can be **seen and touched**.
+
+### 🔧 Types of Hardware
+1. **Input Devices** – Keyboard, Mouse, Scanner
+2. **Output Devices** – Monitor, Printer, Speaker
+3. **Processing Devices** – CPU
+4. **Storage Devices** – Hard Disk, SSD, RAM
+
+
+## 💾 What is Software?
+**Software** is a **collection of instructions** that tells the hardware what to do. It is **not physical** and cannot be touched.
+
+### 🧩 Types of Software
+1. **System Software** – Windows, Linux, Device Drivers
+2. **Application Software** – MS Word, Chrome, Photoshop
+3. **Programming Software** – VS Code, Compiler, Debugger
+
+
+## 🆚 Difference Between Hardware and Software
+
+| Hardware               | Software                       |
+|------------------------|--------------------------------|
+| Physical components     | Instruction/code               |
+| Can be touched          | Cannot be touched              |
+| Examples: CPU, Mouse    | Examples: Windows, Chrome      |
+
+
+# 💡 Programming Language Levels
+
+## 🔵 1. High-Level Language (HLL)
+
+### 📘 Definition
+A high-level language is close to human language and easy to write, read, and understand.
+
+### ✅ Advantages
+- Easy to learn and use
+- Portable across systems
+- Easier to debug and maintain
+
+### ❌ Disadvantages
+- Slower execution
+- Needs a compiler/interpreter
+
+### 🧾 Examples
+- Python, Java, C++, JavaScript
+
+
+## 🟡 2. Low-Level Language (LLL)
+
+### 📘 Definition
+A low-level language is closer to hardware and gives more control to the programmer.
+
+### ✅ Advantages
+- Faster execution
+- Better control over hardware
+
+### ❌ Disadvantages
+- Hard to understand and write
+- Not portable
+
+### 🧾 Example
+- Assembly Language
+
+
+## 🔴 3. Machine-Level Language (MLL)
+
+### 📘 Definition
+Machine language is the binary code (0s and 1s) that is directly understood by the CPU.
+
+### ✅ Advantages
+- Fastest execution
+- No need for translation
+
+### ❌ Disadvantages
+- Very difficult to write
+- Not readable or portable
+
+### 🧾 Example
+- `10110000 01100001` (binary instruction)
+
+# 🧠 Compiler
+
+## 📘 What is a Compiler?
+
+A **compiler** is a program that **translates high-level language code** into **machine language** (binary) **before execution**. It converts the entire program at once and produces an executable file.
+
+
+## ✅ Advantages of Compiler
+
+- 🔹 Fast execution of compiled programs
+- 🔹 Code optimization for better performance
+- 🔹 Detects syntax errors before execution
+
+
+## ❌ Disadvantages of Compiler
+
+- 🔸 Slower compilation (takes time to compile whole code)
+- 🔸 Shows all errors at once – harder for beginners to debug
+- 🔸 Compiled code is often platform dependent
+
+
+## 🧾 Examples of Compilers
+
+- **GCC** – for C/C++
+- **javac** – for Java
+- **Turbo C** – for C/C++ (Windows)
+- **Intel Compiler** – for high-performance C/C++ programs
+
+
 ## Introduction to C++
 
 C++ is a special language that we use to talk to computers. Just like we speak English or Nepali, computers understand C++ when we give them instructions. With C++, we can create fun things like games and apps or solve problems using a computer. It was made by a smart person named Bjarne Stroustrup. When we write C++ code, the computer reads it and does what we ask, like showing a message on the screen. Learning C++ helps us understand how computers think and work, and many big companies use it to build important software. So, by learning C++, you can make your own cool programs and become a computer expert!
@@ -218,4 +362,79 @@ When we write C++ code, the computer does not understand it right away. We need 
 If there are errors, the compiler will tell you what needs fixing. Fix the errors and try compiling again.
 
 This process helps you turn your instructions into working programs!
+
+
+# ❌ Errors in C++
+
+## 📘 What is an Error?
+
+An **error** in C++ is a problem in the code that prevents it from compiling, running, or producing correct results.
+
+
+## 📚 Types of Errors in C++
+
+### 1. Syntax Error
+- Violates the rules of C++ syntax
+- Detected at compile-time
+
+**Example:**
+```cpp
+cout << "Hello" // missing semicolon
+```
+
+### 2. Semantic Error
+- Code structure is correct, but the logic or meaning is wrong
+
+**Example:**
+```cpp
+int a = 10;
+a = a / 0; // Division by zero
+```
+
+
+### 3. Logical Error
+- Code runs, but the result/output is incorrect
+
+**Example:**
+```cpp
+int a = 5, b = 10;
+cout << a - b; // Wrong logic if we want to find the sum
+```
+
+
+### 4. Runtime Error
+- Occurs while the program is running
+
+**Example:**
+```cpp
+int x = 10, y = 0;
+cout << x / y; // Division by zero
+```
+
+
+## ✅ Advantages of Understanding Errors
+
+- Better coding skills
+- Easier debugging
+- Cleaner and more reliable programs
+
+
+## ❌ Disadvantages of Errors
+
+- Time-consuming to fix
+- Can cause crashes
+- Debugging may be difficult
+
+
+## 🧾 Error Types Cheat Sheet
+
+| Error Type     | When it Occurs     | Detected By     | Description                             | Example                          |
+|----------------|--------------------|-----------------|---------------------------------------|---------------------------------|
+| Syntax Error   | Compile-time       | Compiler        | Rule-breaking in language syntax      | Missing `;`                     |
+| Semantic Error | Compile-time       | Compiler/Runtime| Valid syntax but invalid meaning      | Division by zero                |
+| Logical Error  | Runtime (No crash) | Programmer      | Output is wrong due to wrong logic    | Adding by mistake uses `-`      |
+| Runtime Error  | During execution   | Program         | Error happens while the program runs  | Dividing a number by zero       |
+
+
+
 
