@@ -436,5 +436,337 @@ cout << x / y; // Division by zero
 | Runtime Error  | During execution   | Program         | Error happens while the program runs  | Dividing a number by zero       |
 
 
+# 📐 Syntax and Structure in Programming (C++)
+
+## What is Syntax?
+
+**Syntax** means the set of rules that define the **correct way** to write programs in a programming language.
+
+Just like grammar rules in English, syntax rules in C++ tell you how to write instructions so the compiler can understand them.
+
+
+## Why is Syntax Important?
+
+- Ensures the code is **understandable** by the compiler  
+- Prevents errors during compilation  
+- Helps programmers write **consistent** and **clear** code
+
+
+## What is Structure?
+
+**Structure** refers to the way different parts of a program are **organized** or **arranged** together to form a working program.
+
+It includes:
+
+- How functions, variables, and statements are grouped  
+- How the program flow is controlled using loops, conditionals, etc.
+
+
+## Basic Structure of a C++ Program
+
+```cpp
+#include <iostream>  // Preprocessor directive
+
+using namespace std; // Use standard namespace
+
+int main() {         // Main function - program entry point
+    // Your code goes here
+    cout << "Hello, World!" << endl; // Output statement
+    return 0;       // Exit status
+}
+```
+
+# 🔢 Variables and Data Types in C++
+
+## What is a Variable?
+
+A **variable** is a named storage location in memory used to hold data that can change during program execution.
+
+Think of it like a box with a label, where you can store and later change the value inside.
+
+
+## Syntax of Variable Declaration
+
+```cpp
+data_type variable_name = value;
+```
+
+**Example:**
+
+```cpp
+int age = 25;
+float price = 99.99;
+```
+
+
+## What are Data Types?
+
+**Data types** specify what kind of data a variable can store.
+
+Different data types reserve different amounts of memory and define what operations can be performed on the data.
+
+
+## Common Data Types in C++
+
+| Data Type   | Size (approx) | Description                   | Example                  |
+|-------------|---------------|------------------------------|--------------------------|
+| `int`       | 4 bytes       | Stores whole numbers          | `int age = 25;`          |
+| `float`     | 4 bytes       | Stores decimal numbers        | `float price = 99.99;`   |
+| `double`    | 8 bytes       | Stores large decimal numbers  | `double pi = 3.14159;`   |
+| `char`      | 1 byte        | Stores a single character     | `char grade = 'A';`      |
+| `bool`      | 1 byte        | Stores true or false          | `bool isPassed = true;`  |
+
+
+## Types of Variables in C++
+
+1. **Local Variables**  
+   Declared inside a function or block, accessible only within that scope.
+
+2. **Global Variables**  
+   Declared outside all functions, accessible throughout the program.
+
+3. **Static Variables**  
+   Retain their value between function calls, declared with the `static` keyword.
+
+4. **Constant Variables (`const`)**  
+   Variables whose value cannot be changed once initialized.
+
+
+## Syntax of Different Variable Types
+
+| Variable Type | Syntax Example                 |
+|---------------|-------------------------------|
+| Local         | `int localVar = 10;`           |
+| Global        | Declared outside all functions |
+| Static        | `static int count = 0;`        |
+| Constant      | `const int MAX = 100;`         |
+
+
+## Advantages of Variables and Data Types
+
+- **Memory Management:** Reserve appropriate memory for data  
+- **Code Clarity:** Makes the program easier to understand  
+- **Type Safety:** Helps catch errors early by restricting data types  
+- **Reusability:** Variables can store different values over time
+
+
+## Disadvantages
+
+- **Memory Usage:** Improper choice of data types can waste memory  
+- **Type Errors:** Using wrong data types can cause bugs  
+- **Complexity:** Managing many variables can complicate code
+
+
+## Example in C++
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int globalVar = 100; // Global variable
+
+void demoFunction() {
+    static int staticVar = 0;    // Static variable
+    int localVar = 10;           // Local variable
+    const int constantVar = 50;  // Constant variable
+
+    staticVar++;
+    cout << "Static: " << staticVar << ", Local: " << localVar 
+         << ", Constant: " << constantVar << endl;
+}
+
+int main() {
+    int age = 25;
+    float price = 99.99;
+    char grade = 'A';
+    bool isPassed = true;
+
+    cout << "Age: " << age << endl;
+    cout << "Price: $" << price << endl;
+    cout << "Grade: " << grade << endl;
+    cout << "Passed: " << isPassed << endl;
+
+    demoFunction();
+    demoFunction();
+    demoFunction();
+
+    cout << "Global Variable: " << globalVar << endl;
+
+    return 0;
+}
+```
+
+
+# ⚙️ Operators in C++
+
+Operators are symbols that perform operations on variables and values.
+
+
+## 1. Arithmetic Operators
+
+Used for mathematical calculations like addition, subtraction, multiplication, division, and modulus.
+
+### Syntax
+
+```cpp
+result = operand1 operator operand2;
+```
+
+### Common Arithmetic Operators
+
+| Operator | Description       | Example        |
+|----------|-------------------|----------------|
+| `+`      | Addition          | `a + b`        |
+| `-`      | Subtraction       | `a - b`        |
+| `*`      | Multiplication    | `a * b`        |
+| `/`      | Division          | `a / b`        |
+| `%`      | Modulus (remainder)| `a % b`       |
+
+### Example
+
+```cpp
+int a = 10, b = 3;
+cout << a + b; // Output: 13
+cout << a % b; // Output: 1
+```
+
+### Advantages
+
+- Simple and efficient for arithmetic calculations.
+- Easy to understand and use.
+
+### Disadvantages
+
+- Division by zero causes runtime errors.
+- Limited to numeric data types.
+
+
+## 2. Relational Operators
+
+Used to compare two values and return a boolean result (`true` or `false`).
+
+### Syntax
+
+```cpp
+operand1 operator operand2;
+```
+
+### Common Relational Operators
+
+| Operator | Description            | Example      |
+|----------|------------------------|--------------|
+| `==`     | Equal to               | `a == b`     |
+| `!=`     | Not equal to           | `a != b`     |
+| `>`      | Greater than           | `a > b`      |
+| `<`      | Less than              | `a < b`      |
+| `>=`     | Greater than or equal  | `a >= b`     |
+| `<=`     | Less than or equal     | `a <= b`     |
+
+### Example
+
+```cpp
+int a = 5, b = 10;
+cout << (a < b);  // Output: 1 (true)
+cout << (a == b); // Output: 0 (false)
+```
+
+### Advantages
+
+- Useful for decision-making and control flow.
+- Clear and intuitive syntax.
+
+### Disadvantages
+
+- Only compares values, not data types.
+- Can cause confusion if not used carefully (e.g., assignment `=` vs equality `==`).
+
+
+## 3. Logical Operators
+
+Used to combine multiple boolean expressions.
+
+### Syntax
+
+```cpp
+expression1 operator expression2;
+```
+
+### Common Logical Operators
+
+| Operator | Description    | Example           |
+|----------|----------------|-------------------|
+| `&&`     | Logical AND    | `(a > 0 && b > 0)`|
+| `||`     | Logical OR     | `(a > 0 || b > 0)`|
+| `!`      | Logical NOT    | `!(a > b)`        |
+
+### Example
+
+```cpp
+bool x = true, y = false;
+cout << (x && y); // Output: 0 (false)
+cout << (!x);     // Output: 0 (false)
+```
+
+### Advantages
+
+- Powerful for complex conditional statements.
+- Improves code readability.
+
+### Disadvantages
+
+- Complex conditions can become hard to debug.
+- Logical errors can be tricky to find.
+
+
+## 4. Bitwise Operators
+
+Operate on bits and perform bit-level operations.
+
+### Syntax
+
+```cpp
+operand1 operator operand2;
+```
+
+### Common Bitwise Operators
+
+| Operator | Description         | Example       |
+|----------|---------------------|---------------|
+| `&`      | Bitwise AND         | `a & b`       |
+| `|`      | Bitwise OR          | `a | b`       |
+| `^`      | Bitwise XOR         | `a ^ b`       |
+| `~`      | Bitwise NOT         | `~a`          |
+| `<<`     | Left shift          | `a << 2`      |
+| `>>`     | Right shift         | `a >> 2`      |
+
+### Example
+
+```cpp
+int a = 5;    // binary: 0101
+int b = 3;    // binary: 0011
+cout << (a & b);  // Output: 1 (0001)
+cout << (a << 1); // Output: 10 (1010)
+```
+
+### Advantages
+
+- Efficient for low-level programming and performance-critical code.
+- Useful for manipulating bits in embedded systems, cryptography, and graphics.
+
+### Disadvantages
+
+- Harder to understand for beginners.
+- Can cause unexpected results if not used carefully.
+
+
+# Summary Table
+
+| Operator Type     | Purpose                  | Result Type        | Usage Example             |
+|-------------------|--------------------------|--------------------|---------------------------|
+| Arithmetic        | Mathematical operations  | Numeric            | `a + b`                   |
+| Relational        | Comparison               | Boolean (`true`/`false`) | `a == b`             |
+| Logical           | Combine boolean expressions | Boolean          | `a && b`                  |
+| Bitwise           | Bit-level operations     | Numeric (bits)     | `a & b`                   |
+
 
 
